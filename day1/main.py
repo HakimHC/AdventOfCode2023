@@ -14,7 +14,7 @@ def main():
         digits = re.findall(r'[0-9]', line)
         sum += int(f'{digits[0]}{digits[-1]}')
 
-    print('Result: ', sum)
+    print(f'Result: {sum}')
 
 
 if __name__ == "__main__":
