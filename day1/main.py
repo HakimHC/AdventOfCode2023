@@ -12,7 +12,7 @@ def main():
     sum = 0
     for line in lines:
         digits = re.findall(r'[0-9]', line)
-        sum += int(str(digits[0]) + str(digits[-1]))
+        sum += int(f'{digits[0]}{digits[-1]}')
 
     print('Result: ', sum)
 
