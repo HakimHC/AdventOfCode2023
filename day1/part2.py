@@ -29,14 +29,10 @@ def main():
     sum = 0
     for line in lines:
         digits = re.findall(r'(?=([0-9]|one|two|three|four|five|six|seven|eight|nine))', line)
-        # print(line)
-        if line == "85oneighttx":
-            print(digits)
         digits = [convert(digit) for digit in digits]
-        # print(digits)
         sum += int(str(digits[0]) + str(digits[-1]))
 
-    print('Result: ', sum)
+    print(f'Result: {sum}')
 
 
 if __name__ == "__main__":
