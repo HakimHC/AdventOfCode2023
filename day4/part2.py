@@ -53,17 +53,12 @@ class Solution:
         result = []
         original = [{'id': elem, 'inspected': False} for elem in self.card_details.keys()]
         i = 0
-        while True:
+        while i < len(original):
             if original[i]['inspected'] == False:
                 original += self.generate_copies(original[i]['id'])
                 original[i]['inspected'] = True
             i += 1
-            try:
-                original[i]
-            except IndexError:
-                break
         print(f'Result: {len(original)}')
-
 
 
 if __name__ == "__main__":
